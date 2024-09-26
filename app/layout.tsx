@@ -1,17 +1,28 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { Arima, Nunito, Raleway } from 'next/font/google';
+import Topbar from '../components/Topbar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const arima = Arima({
+  subsets: ['latin'],
+  weight: ['100', '300', '500'],
+  display: 'swap',
+  variable: '--font-arima'
+})
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['600'],
+  variable: '--font-nunito'
+})
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['100', '300', '700'],
+  variable: '--font-raleway'
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,15 +31,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={`${arima.variable} ${nunito.variable} ${raleway.variable}`}>
+      <body className="flex min-h-screen flex-col bg-white">
+        <Topbar />
+        <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+        <Footer />
       </body>
     </html>
   );
