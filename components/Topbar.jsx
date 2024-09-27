@@ -9,7 +9,7 @@ const Topbar = () => {
                         <Phone size={16} style={{color:"white"}}/>
                         <span><a href="tel:+1234567890" className="text-white hover:underline">Call Us Now: (123) 456-7890</a></span>
                     </div>
-                    <div className="hidden md:flex items-center space-x-2">
+                    <div className="hidden lg:flex items-center space-x-2">
                         <Mail size={16} style={{color: "white"}} />
                         <span><a href="mailto:info@example.com" className="text-white hover:underline">Email Us: info@example.com</a></span>
                     </div>

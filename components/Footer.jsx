@@ -16,16 +16,16 @@ const Footer = () => {
                             <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
                             <ul role="list" className="mt-6 space-y-4">
                                 <li>
-                                    <Link href="/services/1" className="text-sm leading-6 text-gray-300 hover:text-white">Service 1</Link>
+                                    <Link href="/services/drywall-repair" className="text-sm leading-6 text-gray-300 hover:text-white">Drywall Repair</Link>
                                 </li>
                                 <li>
-                                    <Link href="/services/2" className="text-sm leading-6 text-gray-300 hover:text-white">Service 2</Link>
+                                    <Link href="/services/household-repairs" className="text-sm leading-6 text-gray-300 hover:text-white">Household Repairs</Link>
                                 </li>
                                 <li>
-                                    <Link href="/services/3" className="text-sm leading-6 text-gray-300 hover:text-white">Service 3</Link>
+                                    <Link href="/services/hvac-repair" className="text-sm leading-6 text-gray-300 hover:text-white">HVAC Repair</Link>
                                 </li>
                                 <li>
-                                    <Link href="/services/4" className="text-sm leading-6 text-gray-300 hover:text-white">Service 4</Link>
+                                    <Link href="/services/tv-mounting" className="text-sm leading-6 text-gray-300 hover:text-white">TV Mounting</Link>
                                 </li>
                             </ul>
                         </div>

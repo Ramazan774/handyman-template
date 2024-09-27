@@ -1,11 +1,11 @@
 import Link from 'next/link'; 
 import Image from 'next/image';
 
-const ServiceCard = ({ imageSrc, title, description, serviceNumber }) => (
+const ServiceCard = ({ imageSrc, title, description, serviceName }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:-translate-y-1 hover:scale-110 duration-300">
     <Image src={imageSrc} alt={title} className="w-full h-48 object-cover" width={100} height={100} />
     <div className="p-6">
-      <Link href={`/services/${serviceNumber}`} className="arima text-xl font-bold text-blue-800 hover:text-blue-500 mb-2 block">
+      <Link href={`/services/${serviceName}`} className="arima text-xl font-bold text-blue-800 hover:text-blue-500 mb-2 block">
         {title}
       </Link>
       <p className="raleway text-gray-600">{description}</p>
@@ -17,27 +17,27 @@ const ServicesSection = () => {
   const services = [
     {
       imageSrc: "/assets/image2.webp",  
-      title: "Pool Resurfacing",
+      title: "Drywall Repair",
       description: "Revitalize your pool with our expert resurfacing services, ensuring a smooth and durable finish.",
-      serviceNumber: 1
+      serviceName: "drywall-repair"
     },
     {
       imageSrc: "/assets/image2.webp", 
-      title: "Tile Replacement",
+      title: "Household Repairs",
       description: "Update your pool's look with our professional tile replacement and repair services.",
-      serviceNumber: 2
+      serviceName: "household-repairs"
     },
     {
       imageSrc: "/assets/image3.webp", 
-      title: "Deck Refurbishing",
+      title: "HVAC Repair",
       description: "Transform your pool area with our comprehensive deck refurbishing and renovation solutions.",
-      serviceNumber: 3
+      serviceName: "hvac-repair"
     },
     {
       imageSrc: "/assets/image1.webp", 
-      title: "Leak Detection & Repair",
+      title: "TV Mounting",
       description: "Identify and fix pool leaks quickly with our advanced detection and repair techniques.",
-      serviceNumber: 4
+      serviceName: "tv-mounting"
     }
   ];
 

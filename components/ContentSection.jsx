@@ -9,7 +9,7 @@ const ContentSection = () => {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="lg:w-1/2 pr-8">
             <p className="arima text-sm text-blue-800 mb-2">{`Professional and Reliable`}</p>
-            <h2 className="arima text-7xl font-bold text-gray-900 mb-6">Handyman Business in Madison, WI</h2>
+            <h2 className="arima text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">Handyman Business in Madison, WI</h2>
             <p className="raleway text-lg text-gray-700 mb-8">
               Welcome to Madison's premier handyman service, where quality craftsmanship meets unparalleled customer care. 
               For over a decade, we've been the go-to solution for homeowners and businesses alike, tackling everything from 

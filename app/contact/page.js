@@ -58,19 +58,19 @@ const ContactPage = () => {
                         <form className="space-y-4" data-netlify="true">
                             <div>
                                 <label htmlFor="fullName" className="block raleway text-sm font-medium text-gray-700">Full Name</label>
-                                <input type="text" id="fullName" name="fullName" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter Your Name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
                             </div>
                             <div>
                                 <label htmlFor="phoneNumber" className="block raleway text-sm font-medium text-gray-700">Phone Number</label>
-                                <input type="tel" id="phoneNumber" name="phoneNumber" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter Your Phone Number" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block raleway text-sm font-medium text-gray-700">Email Address</label>
-                                <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                                <input type="email" id="email" name="email" placeholder="Enter Your Email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
                             </div>
                             <div>
                                 <label htmlFor="message" className="block raleway text-sm font-medium text-gray-700">Message</label>
-                                <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                                <textarea id="message" name="message" rows={4} placeholder="Enter Your Message" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
                             </div>
                             <div>
                                 <button type="submit" className="arima w-full bg-blue-700 px-4 py-2 text-sm font-medium rounded-md text-white shadow-sm hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">

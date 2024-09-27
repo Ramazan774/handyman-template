@@ -80,7 +80,7 @@ const Gallery = () => {
   return (
     <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="raleway text-6xl font-semibold text-black text-center mb-8">
+        <h2 className="raleway text-5xl sm:text-6xl lg:text-6xl font-semibold text-black text-center mb-8">
           See Some Of Our Work Examples
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
