@@ -27,12 +27,12 @@ const TestimonialCard = ({ quote, author, role }) => (
 const TestimonialSection = () => {
   const testimonials = [
     {
-      quote: "The team at Madison Handyman Services did an exceptional job with my home repairs. Their attention to detail and professionalism were outstanding. I couldn't be happier with the results!",
+      quote: "The team at Madison Handyman Services did an exceptional job with my home repairs. Their attention to detail and professionalism were outstanding. I could not be happier with the results!",
       author: "Sarah Johnson",
       role: "Homeowner"
     },
     {
-      quote: "I've used many handyman services before, but none compare to the quality and reliability of this team. They're my go-to for all home improvement projects now.",
+      quote: "I have used many handyman services before, but none compare to the quality and reliability of this team. They are my go-to for all home improvement projects now.",
       author: "Mike Thompson",
       role: "Homeowner"
     }
