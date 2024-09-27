@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
@@ -37,16 +36,16 @@ const ContactPage = () => {
                             className="rounded-lg"
                         />
                         <p className="raleway text-sm mt-4">
-                            Get in touch with our skilled handymen for all your home repair and maintenance needs. We're here to make your life easier and your home better.
+                            {`Get in touch with our skilled handymen for all your home repair and maintenance needs. We're here to make your life easier and your home better.`}
                         </p>
                         <div className="mt-6 space-y-4">
                             <div className="flex items-center">
                                 <Phone className="w-5 h-5 text-blue-700 mr-2" />
-                                <a href="tel:+1234567890" className="raleway text-sm">+1 (234) 567-890</a>
+                                <a href="tel:+1234567890" className="raleway text-sm">{`+1 (234) 567-890`}</a>
                             </div>
                             <div className="flex items-center">
                                 <Mail className="w-5 h-5 text-blue-700 mr-2" />
-                                <a href="mailto:contact@handyman.com" className="raleway text-sm">contact@handyman.com</a>
+                                <a href="mailto:contact@handyman.com" className="raleway text-sm">{`contact@handyman.com`}</a>
                             </div>
                             <div className="flex items-center">
                                 <MapPin className="w-5 h-5 text-blue-700 mr-2" />

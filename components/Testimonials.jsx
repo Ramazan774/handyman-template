@@ -4,7 +4,7 @@ const StarIcon = () => (
   </svg>
 );
 
-const TestimonialCard = ({ quote, author, role, imageSrc }) => (
+const TestimonialCard = ({ quote, author, role }) => (
   <figure className="mx-auto max-w-2xl">
     <p className="sr-only">5 out of 5 stars</p>
     <div className="flex gap-x-1 text-indigo-600">
@@ -42,10 +42,10 @@ const TestimonialSection = () => {
     <section className="bg-gray-100 px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="arima text-base font-semibold text-blue-800 tracking-wide">Our Testimonials</h2>
-          <h3 className="arima mt-2 text-4xl font-extrabold text-black sm:text-7xl">Our Customers Like Us</h3>
+          <h2 className="arima text-base font-semibold text-blue-800 tracking-wide">{`Our Testimonials`}</h2>
+          <h3 className="arima mt-2 text-4xl font-extrabold text-black sm:text-7xl">{`Our Customers Like Us`}</h3>
           <p className="raleway mt-4 max-w-2xl mx-auto text-xl text-gray-900">
-            At Madison Handyman Services, we've been proudly serving the Madison, WI area for over a decade. Our team of skilled professionals is dedicated to delivering top-notch home repair and improvement services to our community. From small fixes to major renovations, we're committed to excellence in every project we undertake.
+            {`At Madison Handyman Services, we've been proudly serving the Madison, WI area for over a decade. Our team of skilled professionals is dedicated to delivering top-notch home repair and improvement services to our community. From small fixes to major renovations, we're committed to excellence in every project we undertake.`}
           </p>
         </div>
         <div className="nunito grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">

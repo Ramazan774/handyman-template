@@ -8,10 +8,10 @@ const AboutSection = () => {
           <div className="lg:w-1/2 lg:pr-8">
             <h2 className="arima text-3xl font-bold tracking-tight text-gray-900 sm:text-7xl">Expert Handyman Services</h2>
             <p className="nunito mt-6 text-xl leading-8 text-gray-600">
-              Our team of skilled professionals is dedicated to providing top-notch handyman services for all your home improvement needs. From minor repairs to major renovations, we've got you covered.
+              {`Our team of skilled professionals is dedicated to providing top-notch handyman services for all your home improvement needs. From minor repairs to major renovations, we've got you covered.`}
             </p>
             <p className="raleway mt-6 text-base leading-7 text-gray-600">
-              With years of experience and a commitment to quality, our handymen tackle each project with precision and care. We pride ourselves on our attention to detail and customer satisfaction.
+              {`With years of experience and a commitment to quality, our handymen tackle each project with precision and care. We pride ourselves on our attention to detail and customer satisfaction.`}
             </p>
             <div className="mt-8">
               <a href="/about" className="arima inline-block px-6 py-3 border border-blue-800 text-white bg-blue-700 hover:bg-blue-900 rounded-2xl transition duration-300 text-center text-lg">
