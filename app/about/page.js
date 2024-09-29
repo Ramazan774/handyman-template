@@ -32,18 +32,9 @@ const MainSection = () => (
         <div className="w-full lg:w-1/2 relative">
           <div className="aspect-[2/1] relative w-full h-[400px] sm:h-[500px] lg:h-[600px]">
             <Image
-              className="rounded-2xl object-cover shadow-2xl"
+              className="rounded-full object-cover shadow-2xl"
               src="/assets/image7.webp"
               alt="Testimonial image 1"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="aspect-[3/2] w-2/3 absolute -bottom-16 -right-8 translate-y-1/4 hidden lg:block">
-            <Image
-              className="rounded-2xl object-cover shadow-2xl border-4 border-white"
-              src="/assets/image4.webp"
-              alt="Testimonial image 2"
               layout="fill"
               objectFit="cover"
             />

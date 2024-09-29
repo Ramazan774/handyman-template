@@ -93,6 +93,7 @@ const Gallery = () => {
                 height={400}
                 className="w-full h-full object-cover cursor-pointer transform transition-transform hover:scale-105"
                 onClick={() => handleImageClick(index)}
+                loading='lazy'
               />
             </div>
           ))}

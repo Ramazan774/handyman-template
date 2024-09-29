@@ -60,7 +60,7 @@ const Gallery = () => {
     '/assets/image9.webp',
     '/assets/image10.webp',
     '/assets/image11.webp',
-    '/assets/image12.webp',
+    // '/assets/image12.webp',
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);

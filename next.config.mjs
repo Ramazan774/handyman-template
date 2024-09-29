@@ -2,7 +2,7 @@
 const nextConfig = {
     images: {
     },
-    output: 'export',
+    // output: 'export',
   };
   
   export default nextConfig;
