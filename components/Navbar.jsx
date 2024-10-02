@@ -22,9 +22,9 @@ const Navbar = () => {
   const isActive = (href) => pathname === href ? 'text-blue-800' : 'text-black hover:text-blue-800';
 
   return (
-    <nav className="bg-white shadow-xl">
+    <nav className="bg-white shadow-xl fixed top-[35px] left-0 right-0 z-40 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 sm:h-20">
+        <div className="flex justify-between h-12 sm:h-20">
           <div className="flex items-center">
           <Link href="/">
               <Image src="/assets/logo.webp" alt="Logo" width={50} height={50} className="sm:w-[70px] sm:h-[70px]" />
@@ -97,15 +97,9 @@ const Navbar = () => {
         className={`lg:hidden fixed inset-0 z-50 bg-white transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ top: '82px'}}
       >
-        <div className="flex justify-end p-4">
-          <button onClick={closeMenu} className="text-gray-500 hover:text-gray-700">
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div className="arima px-2 pt-2 pb-3 space-y-4">
+        <div className="arima px-2 pb-3 space-y-2">
           <Link href="/" className={`block font-bold px-3 py-4 text-4xl ${isActive('/')}`} onClick={closeMenu}>Home</Link>
           <Link href="/about" className={`block font-bold px-3 py-4 text-4xl ${isActive('/about')}`} onClick={closeMenu}>About Us</Link>
           <button

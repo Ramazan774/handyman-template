@@ -2,7 +2,7 @@ import { Phone, Mail, Clock } from 'lucide-react';
 
 const Topbar = () => {
     return (
-        <div id="topbar" className="bg-blue-800 py-2 sm:py-4">
+        <div id="topbar" className="bg-blue-800 py-2 sm:py-2 fixed top-0 left-0 right-0 z-50 w-full" style={{ height: '40px'}}>
             <div className="max-w-7xl mx-auto px-2 sm:px-4 flex justify-between items-center text-sm">
                 <div className="flex space-x-2 sm:space-x-6">
                     <div className="flex items-center space-x-2">
