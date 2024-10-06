@@ -1,16 +1,24 @@
 import React from 'react';
 
-const StarIcon = () => (
-  <svg className="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+const StarIcon = ({ filled }) => (
+  <svg 
+    className={`h-5 w-5 flex-none ${filled ? 'text-indigo-600' : 'text-gray-300'}`} 
+    viewBox="0 0 20 20" 
+    fill="currentColor" 
+    aria-hidden="true"
+  >
     <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
   </svg>
 );
 
 const StarRating = ({ rating }) => (
-  <div className="flex gap-x-1 text-indigo-600" aria-label={`${rating} out of 5 stars`}>
-    {[...Array(5)].map((_, i) => (
-      <StarIcon key={i} />
-    ))}
+  <div className="flex items-center">
+    <div className="flex" aria-hidden="true">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <StarIcon key={star} filled={star <= rating} />
+      ))}
+    </div>
+    <span className="sr-only">{rating} out of 5 stars</span>
   </div>
 );
 
@@ -52,7 +60,7 @@ const TestimonialSection = () => {
           <p className="arima text-base font-semibold text-blue-800 tracking-wide">Our Testimonials</p>
           <h2 id="testimonials-heading" className="arima mt-2 text-4xl font-extrabold text-black sm:text-7xl">Our Customers Like Us</h2>
           <p className="raleway mt-4 max-w-2xl mx-auto text-xl text-gray-900">
-            {`At Madison Handyman Services, we've been proudly serving the Madison, WI area for over a decade. Our team of skilled professionals is dedicated to delivering top-notch home repair and improvement services to our community. From small fixes to major renovations, we're committed to excellence in every project we undertake.`}
+            At Madison Handyman Services, we've been proudly serving the Madison, WI area for over a decade. Our team of skilled professionals is dedicated to delivering top-notch home repair and improvement services to our community. From small fixes to major renovations, we're committed to excellence in every project we undertake.
           </p>
         </header>
         <div className="nunito grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">

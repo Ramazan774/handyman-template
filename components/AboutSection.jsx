@@ -15,7 +15,7 @@ const AboutSection = () => {
             </p>
             <div className="mt-8">
               <a href="/about" className="arima inline-block px-6 py-3 border border-blue-800 text-white bg-blue-700 hover:bg-blue-900 rounded-2xl transition duration-300 text-center text-lg">
-                Read More
+                Who We Are
               </a>
             </div>
           </div>
