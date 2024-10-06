@@ -1,7 +1,7 @@
 import React from 'react';
 
-const CustomIcon = ({ paths }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12">
+const CustomIcon = ({ paths, title }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12" aria-hidden="true" role="img" aria-label={title}>
     {paths.map((d, index) => (
       <path key={index} strokeLinecap="round" strokeLinejoin="round" d={d} />
     ))}
@@ -10,7 +10,7 @@ const CustomIcon = ({ paths }) => (
 
 const FeatureItem = ({ IconPaths, title, description }) => (
   <div className="flex flex-col items-center px-4 mb-8 lg:mb-0">
-    <CustomIcon paths={IconPaths} />
+    <CustomIcon paths={IconPaths} title={title} />
     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 mt-4 text-center">{title}</h3>
     <p className="text-sm sm:text-base text-center max-w-xs">{description}</p>
   </div>
@@ -36,10 +36,10 @@ const FeatureSection = () => {
   ];
 
   return (
-    <div className="bg-blue-800 text-white py-12 sm:py-16 lg:py-20">
+    <section className="bg-blue-800 text-white py-12 sm:py-16 lg:py-20" aria-labelledby="features-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="arima text-sm sm:text-base mb-2 sm:mb-4">Our Features</h1>
-        <h2 className="arima text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">Why Choose Us</h2>
+        <p className="arima text-sm sm:text-base mb-2 sm:mb-4">Our Features</p>
+        <h2 id="features-heading" className="arima text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Why Choose Us</h2>
         <p className="raleway text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto">
           We offer top-notch handyman services with a focus on quality, efficiency, and customer satisfaction. Our experienced team is ready to tackle any project, big or small.
         </p>
@@ -55,7 +55,7 @@ const FeatureSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

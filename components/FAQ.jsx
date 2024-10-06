@@ -10,8 +10,9 @@ const StaticImage = ({ src, alt, className }) => (
   </div>
 );
 
-const FAQItem = ({ question, answer }) => {
+const FAQItem = ({ question, answer, index }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const itemId = `faq-${index}`;
 
   return (
     <div className="pt-6">
@@ -21,16 +22,16 @@ const FAQItem = ({ question, answer }) => {
           className="flex w-full items-start justify-between text-left text-gray-900"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
+          aria-controls={itemId}
         >
           <span className="text-base font-semibold leading-7">{question}</span>
-          <span className="ml-6 flex h-7 items-center">
+          <span className="ml-6 flex h-7 items-center" aria-hidden="true">
             <svg
               className={`h-6 w-6 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              aria-hidden="true"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
@@ -38,6 +39,7 @@ const FAQItem = ({ question, answer }) => {
         </button>
       </dt>
       <dd 
+        id={itemId}
         className={`mt-2 pr-12 overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
@@ -51,49 +53,49 @@ const FAQItem = ({ question, answer }) => {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What's the best thing about Switzerland?",
-      answer: "The flag is a big plus! Switzerland also offers stunning landscapes, excellent chocolate, and precise timepieces."
+      question: "What services do you offer?",
+      answer: "We offer a wide range of handyman services including plumbing, electrical work, carpentry, painting, and general home repairs. No job is too small or too big for our skilled team."
     },
     {
-      question: "How does a quantum computer work?",
-      answer: "Quantum computers use quantum bits or qubits, which can exist in multiple states simultaneously, allowing for complex calculations to be performed much faster than classical computers."
+      question: "How do I schedule a service?",
+      answer: "You can easily schedule a service by calling our office, using our online booking system, or sending us an email. We'll get back to you promptly to confirm your appointment."
     },
     {
-      question: "What is the meaning of life?",
-      answer: "While there's no universally agreed-upon answer, many philosophers suggest it's about finding personal fulfillment, contributing to society, or simply enjoying the journey of life itself."
+      question: "Do you offer emergency services?",
+      answer: "Yes, we understand that some repairs can't wait. We offer 24/7 emergency services for urgent issues like major leaks or electrical problems."
     },
     {
-      question: "How do you make the perfect cup of coffee?",
-      answer: "The perfect cup of coffee varies by preference, but generally involves using freshly roasted beans, the right grind size, proper water temperature (195°F-205°F), and your preferred brewing method."
+      question: "Are your handymen licensed and insured?",
+      answer: "Absolutely! All our handymen are fully licensed, insured, and have undergone thorough background checks. We prioritize your safety and peace of mind."
     }
   ];
 
   return (
-    <div className="bg-gray-100 overflow-hidden">
+    <section className="bg-gray-100 overflow-hidden" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="lg:flex lg:items-start lg:gap-x-12">
           {/* Images section */}
           <div className="mb-16 lg:mb-0 lg:w-1/2">
             <div className="grid grid-cols-2 gap-8 lg:gap-12">
-              <StaticImage src="/assets/image2.webp" alt="Image 1" className="justify-self-end" />
-              <StaticImage src="/assets/image3.webp" alt="Image 2" className="justify-self-start" />
-              <StaticImage src="/assets/image7.webp" alt="Image 3" className="justify-self-end" />
-              <StaticImage src="/assets/image6.webp" alt="Image 4" className="justify-self-start" />
+              <StaticImage src="/assets/image2.webp" alt="Handyman working on electrical repairs" className="justify-self-end" />
+              <StaticImage src="/assets/image3.webp" alt="Plumbing repair in progress" className="justify-self-start" />
+              <StaticImage src="/assets/image7.webp" alt="Carpentry work being performed" className="justify-self-end" />
+              <StaticImage src="/assets/image6.webp" alt="Painting and finishing touches" className="justify-self-start" />
             </div>
           </div>
 
           {/* Text section */}
           <div className="lg:w-1/2">
-            <h2 className="arima text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <h2 id="faq-heading" className="arima text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-gray-900 mb-12">Frequently Asked Questions</h2>
             <dl className="nunito mt-10 space-y-6 divide-y divide-gray-900/10">
               {faqs.map((faq, index) => (
-                <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                <FAQItem key={index} question={faq.question} answer={faq.answer} index={index} />
               ))}
             </dl>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
