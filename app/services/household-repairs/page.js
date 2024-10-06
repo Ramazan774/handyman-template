@@ -53,9 +53,9 @@ const MainSection = () => (
         <div className="w-full lg:w-1/2 lg:pl-16 lg:pt-8">
           <div className="relative isolate">
             <div className="arima text-base sm:text-lg font-medium leading-7 sm:leading-8 text-gray-900">
-              <p>Our household repair services cover a wide range of needs, from minor fixes to major renovations. We pride ourselves on our attention to detail and commitment to quality workmanship.</p>
-              <p className="mt-4">With years of experience in the industry, our team of skilled professionals is equipped to handle any repair challenge. We use top-quality materials and innovative techniques to ensure lasting results.</p>
-              <p className="mt-4">Whether you need plumbing repairs, electrical work, carpentry, or general maintenance, we're here to help restore your home to its best condition.</p>
+              <p>{`Our household repair services cover a wide range of needs, from minor fixes to major renovations. We pride ourselves on our attention to detail and commitment to quality workmanship.`}</p>
+              <p className="mt-4">{`With years of experience in the industry, our team of skilled professionals is equipped to handle any repair challenge. We use top-quality materials and innovative techniques to ensure lasting results.`}</p>
+              <p className="mt-4">{`Whether you need plumbing repairs, electrical work, carpentry, or general maintenance, we're here to help restore your home to its best condition.`}</p>
               <h2 className="nunito text-3xl mt-8 mb-2">Areas we serve</h2>
               <ul className="list-disc list-inside">
                 <li>Madison</li>
@@ -77,7 +77,7 @@ const HouseholdRepairs = () => {
   return (
     <>
       <Head>
-        <title>About Our Household Repairs Services | Your Company Name</title>
+        <title>{`About Our Household Repairs Services | Your Company Name`}</title>
         <meta name="description" content="Learn about our professional household repair services. We serve Madison, Oregon, Fitchburg, Verona, Sun Prairie, and De Forest with quality home maintenance and improvements." />
         <link rel="canonical" href="https://handyman-template-site.netlify.app/about" />
       </Head>
