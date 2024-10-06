@@ -46,9 +46,9 @@ const MainSection = () => (
         <div className="w-full lg:w-1/2 lg:pl-16 lg:pt-8">
           <div className="relative isolate">
             <div className="arima text-lg font-medium leading-8 text-gray-900 sm:text-xl sm:leading-9">
-              <p>At [Your Company Name], we pride ourselves on delivering top-notch handyman services with a focus on quality, efficiency, and customer satisfaction. Our team of skilled professionals is ready to tackle any project, big or small, ensuring your home maintenance and improvement needs are met with the highest standards of craftsmanship.</p>
-              <p className="mt-4">With years of experience serving the Madison area, we've built a reputation for reliability, attention to detail, and exceptional customer service. From drywall repair to HVAC maintenance, TV mounting to general household repairs, we're your one-stop solution for all your home service needs.</p>
-              <p className="mt-4">Our commitment to excellence and our deep roots in the local community set us apart. We understand the unique needs of homeowners in Madison and surrounding areas, allowing us to provide tailored solutions that exceed expectations.</p>
+              <p>{`At [Your Company Name], we pride ourselves on delivering top-notch handyman services with a focus on quality, efficiency, and customer satisfaction. Our team of skilled professionals is ready to tackle any project, big or small, ensuring your home maintenance and improvement needs are met with the highest standards of craftsmanship.`}</p>
+              <p className="mt-4">{`With years of experience serving the Madison area, we've built a reputation for reliability, attention to detail, and exceptional customer service. From drywall repair to HVAC maintenance, TV mounting to general household repairs, we're your one-stop solution for all your home service needs.`}</p>
+                <p className="mt-4">{`Our commitment to excellence and our deep roots in the local community set us apart. We understand the unique needs of homeowners in Madison and surrounding areas, allowing us to provide tailored solutions that exceed expectations.`}</p>
             </div>
             <div className="mt-8 text-base">
               <Link href="/contact" className="arima inline-block px-6 py-2 border border-blue-800 text-white bg-blue-700 hover:bg-blue-900 rounded-2xl transition duration-300 text-center">

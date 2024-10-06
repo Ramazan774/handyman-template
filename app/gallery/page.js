@@ -85,7 +85,7 @@ const Gallery = () => {
   return (
     <>
       <Head>
-        <title>Our Projects Gallery | Your Handyman Business</title>
+        <title>{`Our Projects Gallery | Your Handyman Business`}</title>
         <meta name="description" content="Explore our gallery of completed handyman projects. See the quality and craftsmanship we bring to every job in Madison, WI." />
         <link rel="canonical" href="https://yourwebsite.com/gallery" />
       </Head>

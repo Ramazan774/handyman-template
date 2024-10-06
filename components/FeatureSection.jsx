@@ -41,7 +41,7 @@ const FeatureSection = () => {
         <p className="arima text-sm sm:text-base mb-2 sm:mb-4">Our Features</p>
         <h2 id="features-heading" className="arima text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Why Choose Us</h2>
         <p className="raleway text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto">
-          We offer top-notch handyman services with a focus on quality, efficiency, and customer satisfaction. Our experienced team is ready to tackle any project, big or small.
+          {`We offer top-notch handyman services with a focus on quality, efficiency, and customer satisfaction. Our experienced team is ready to tackle any project, big or small.`}
         </p>
         
         <div className="raleway flex flex-col lg:flex-row justify-center lg:space-x-8 xl:space-x-16">

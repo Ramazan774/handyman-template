@@ -52,7 +52,7 @@ const TestimonialSection = () => {
           <p className="arima text-base font-semibold text-blue-800 tracking-wide">Our Testimonials</p>
           <h2 id="testimonials-heading" className="arima mt-2 text-4xl font-extrabold text-black sm:text-7xl">Our Customers Like Us</h2>
           <p className="raleway mt-4 max-w-2xl mx-auto text-xl text-gray-900">
-            At Madison Handyman Services, we've been proudly serving the Madison, WI area for over a decade. Our team of skilled professionals is dedicated to delivering top-notch home repair and improvement services to our community. From small fixes to major renovations, we're committed to excellence in every project we undertake.
+            {`At Madison Handyman Services, we've been proudly serving the Madison, WI area for over a decade. Our team of skilled professionals is dedicated to delivering top-notch home repair and improvement services to our community. From small fixes to major renovations, we're committed to excellence in every project we undertake.`}
           </p>
         </header>
         <div className="nunito grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">

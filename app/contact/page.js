@@ -45,7 +45,7 @@ const ContactPage = () => {
                                 className="rounded-lg"
                             />
                             <p className="raleway text-base mt-4">
-                                Get in touch with our skilled handymen for all your home repair and maintenance needs. We're here to make your life easier and your home better.
+                                {`Get in touch with our skilled handymen for all your home repair and maintenance needs. We're here to make your life easier and your home better.`}
                             </p>
                             <address className="mt-6 space-y-4 not-italic">
                                 <div className="flex items-center">
