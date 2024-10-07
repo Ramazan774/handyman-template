@@ -22,7 +22,7 @@ const Navbar = () => {
   const isActive = (href) => pathname === href ? 'text-blue-800' : 'text-black hover:text-blue-800';
 
   return (
-    <nav className="bg-white shadow-xl fixed top-[35px] left-0 right-0 z-40 w-full">
+    <nav className="bg-white shadow-xl fixed top-[35px] left-0 right-0 z-40 w-full" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-12 sm:h-20">
           <div className="flex items-center">
@@ -32,18 +32,24 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:flex justify-center flex-1 items-center">
             <div className="arima flex space-x-4 lg:space-x-8">
-              <Link href="/" className={`${isActive('/')} font-bold px-2 py-1 text-lg lg:text-2xl`}>
+              <Link 
+                href="/" 
+                className={`${isActive('/')} font-bold px-2 py-1 text-lg lg:text-2xl`}
+                aria-current={pathname === '/' ? 'page' : undefined}
+              >
                 Home
               </Link>
-              <Link href="/about" className={`${isActive('/about')} font-bold px-2 py-1 text-lg lg:text-2xl`}>
+              <Link href="/about" className={`${isActive('/about')} font-bold px-2 py-1 text-lg lg:text-2xl`} aria-current={pathname === '/' ? 'page' : undefined}>
                 About Us
               </Link>
               <div className="relative group">
-                <button
-                  onMouseEnter={() => setIsServicesHovered(true)}
-                  onMouseLeave={() => setIsServicesHovered(false)}
-                  className={`${pathname.startsWith('/services') ? 'text-blue-800' : 'text-black hover:text-blue-800'} font-bold px-2 py-1 text-lg lg:text-2xl focus:outline-none flex items-center`}
-                >
+              <button
+                onMouseEnter={() => setIsServicesHovered(true)}
+                onMouseLeave={() => setIsServicesHovered(false)}
+                onClick={() => setServicesOpen(!servicesOpen)}
+                aria-expanded={servicesOpen}
+                className={`${pathname.startsWith('/services') ? 'text-blue-800' : 'text-black hover:text-blue-800'} font-bold px-2 py-1 text-lg lg:text-2xl focus:outline-none flex items-center`}
+              >
                   Services
                   <svg
                     className={`ml-1 h-4 w-4 lg:h-5 lg:w-5 transform transition-transform duration-300 ease-in-out ${isServicesHovered ? 'rotate-180' : ''}`}
@@ -64,10 +70,10 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <Link href="/gallery" className={`${isActive('/gallery')} font-bold px-2 py-1 text-lg lg:text-2xl`}>
+              <Link href="/gallery" className={`${isActive('/gallery')} font-bold px-2 py-1 text-lg lg:text-2xl`} aria-current={pathname === '/' ? 'page' : undefined}>
                 Gallery
               </Link>
-              <Link href="/contact" className={`${isActive('/contact')} font-bold px-2 py-1 text-lg lg:text-2xl`}>
+              <Link href="/contact" className={`${isActive('/contact')} font-bold px-2 py-1 text-lg lg:text-2xl`} aria-current={pathname === '/' ? 'page' : undefined}>
                 Contact
               </Link>
             </div>
