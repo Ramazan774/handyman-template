@@ -9,7 +9,7 @@ const CoverPhoto = () => (
   <header className="relative h-80 lg:h-96">
     <Image
       src="/assets/image8.webp"
-      alt="Company overview background"
+      alt="Photo of a room with a tv"
       layout="fill"
       objectFit="cover"
       className="opacity-80"

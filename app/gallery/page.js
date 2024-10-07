@@ -93,7 +93,7 @@ const Gallery = () => {
         <header className="relative h-80 lg:h-96">
           <Image
             src="/assets/image8.webp"
-            alt="Gallery of our handyman projects"
+            alt="Photo of a room with a tv"
             layout="fill"
             objectFit="cover"
             className="opacity-80"
